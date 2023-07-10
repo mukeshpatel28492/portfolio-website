@@ -1,0 +1,438 @@
+// Begin: Button
+.btn {
+    font-family: $font-family-base;
+	font-weight: $font-medium;
+	font-size:size(16); 
+	line-height:size(24);
+    color:$white;
+    padding: size(13) size(26) size(13) size(15);
+    border-radius: 0;
+    border: none;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    @include Transition(all 0.3s ease-in-out);
+    &:focus{
+        outline: none;
+        box-shadow: none !important;
+    }
+    &.btn-sm {
+        font-size:size(14); 
+        line-height:size(20);
+        padding: size(11) size(15);
+    }
+    &.btn-red{
+        background-color: $red;
+        &:hover{
+            color: $white;
+        }
+    }
+    &.btn-white{
+        background-color: $white;
+        color: $dark;
+    }
+    &::after{
+        content: "\e919";
+        font-family: 'icomoon' !important;
+        margin-left: size(15);
+        left: 0;
+        position: relative;
+        transition: all 0.2s linear 0s;
+        
+    }
+    &:hover{
+        &::after{
+           left: 10px;
+        }   
+       }
+    &.circle-info{
+        &::before{
+            background-color: $info;
+        }
+       
+    }
+    &.circle-red{
+        &::before{
+            background-color: $red;
+        }
+    }
+    &.circle-primary{
+        &::before{
+            background-color: $primary;
+        }
+    }
+    &::before{
+        content: "";
+        width: size(44);
+        height: size(44);
+        border-radius: $rounded-pill;
+        position: absolute;
+        right: size(-8);
+        bottom: size(-8);
+        z-index: -1;
+    }
+}
+.text-btn{
+    font-family: $font-family-base;
+	font-weight: $font-medium;
+	font-size:size(16); 
+	line-height:size(24);
+    color:$dark;
+    border-radius: 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    @include Transition(all 0.3s ease-in-out);
+    &:focus{
+        outline: none;
+        box-shadow: none !important;
+    }
+    &.btn-sm {
+        font-size:size(14); 
+        line-height:size(20);
+        padding: size(11) size(15);
+    }
+    &::after{
+        content: "\e919";
+        font-family: 'icomoon' !important;
+        margin-left: size(15);
+        left: 0;
+        position: relative;
+        transition: all 0.2s linear 0s;
+        
+    }
+    &:hover{
+        &::after{
+           left: 5px;
+        }   
+       }
+    &.circle-info{
+        &::before{
+            background-color: $info;
+        }
+       
+    }
+    &.circle-red{
+        &::before{
+            background-color: $red;
+        }
+    }
+    &.circle-primary{
+        &::before{
+            background-color: $primary;
+        }
+    }
+    &::before{
+        content: "";
+        width: size(18);
+        height: size(18);
+        border-radius: 100%;
+        position: absolute;
+        right: size(15);
+    }
+    &.text-white-btn{
+        color: $white;
+        &:hover{
+            color: $dark;
+        }
+    }
+    &.left-arrow{
+        flex-direction: row-reverse;
+        &::before{
+            left: size(15);
+            right: inherit;
+        }
+        &::after{
+            margin-right: size(15);
+            margin-left: 0;
+            transform: rotate(180deg);
+        }
+        &:hover{
+            &::after{
+                left: -5px;
+                right: inherit;
+            }   
+        }
+    }
+}
+.outline-red{
+   border: 1px solid $red;
+}
+
+// Form Control
+label {
+    font-size: size(24);
+    color: $black;
+    font-weight: $font-regular;
+    font-family: $font-family-base;
+    line-height: size(43);
+    margin-bottom: size(12);
+    display: block;
+    @include media(down, $breakpoint-md) {
+        font-size: size(16);
+        line-height: size(28);
+        margin-bottom: size(8);
+    }
+}
+
+.form-control {
+    background: $white;
+    font-family: $font-family-base;
+    font-weight: $font-regular;
+    font-size: size(16);
+    line-height: size(28);
+    border: 1px solid #C8C8C8;
+    color: $black;
+    padding: size(10) size(12);
+    //border: none;
+    border-radius: 0;
+    width: 100%;
+    @include media(down, $breakpoint-md) {
+        font-size: size(12);
+        line-height: size(24);
+    }
+    @include placeholder {
+        color: $gray;
+    }
+    &:read-only, &:disabled {
+        //background: $read-only;
+        color: $gray;
+        pointer-events: none;
+    }
+    &[type=file]{
+        pointer-events: auto;
+    }
+    &[readonly] {
+        //background: $read-only;
+        color: $gray;
+    }
+    &.focus,
+    &:focus {
+        @include placeholder {
+            color: $gray;
+        }
+        box-shadow: none;
+        background: $white;
+        //border-color: $secondary;
+        color: $black;
+    }
+    &.language-select {
+        &:read-only {
+            color: $black !important;
+        }
+    }
+    &.textarea-large {
+        height: size(170);
+    }
+    &.secondary-control {
+        height: size(42);
+        background-color: #F7F7F7;
+        @include border-radius(20px);
+        border-color: #E3E3E3;
+        font-size: size(15);
+        padding: 0 size(20);
+    }
+}
+.form-group{
+   margin-bottom: size(10);
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+    resize: none;
+    height: size(130);
+    min-height: auto !important;
+}
+/*==Custom Radio & Checkbox ==*/
+.custom-checkbox{
+    &.vertical{
+        label{
+            display: block;
+        }
+    }
+    label{
+        margin:0 10px 10px 0;
+        padding: 0 0 0 26px;
+        cursor: pointer;
+        position: relative;
+        display:inline-block
+    }
+    input[type="checkbox"]{
+        display: none;
+        + span {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            background: $white;
+            border: 1px solid $border-color;
+            border-radius: $border-radius; 
+        }
+        &:checked{
+            + span {
+                border: 1px solid $primary;
+                background: $primary;
+                @include css3-prefix(transition, all 0.3s);
+            }
+            ~ span:after{
+                top: 50%;
+                left: 50%;
+                margin-left: -2px;
+                margin-top: -7px;
+                width: 5px;
+                height: 10px;
+                border-width: 0 1px 1px 0 !important;
+                display: block;
+                border: solid $white;
+                @include css3-prefix(transform, rotate(45deg));
+            }
+        }
+        ~ span:after{
+            display: none;
+            position: absolute;
+            content: "";
+        }
+        &:disabled{
+            + span {
+                opacity: 0.7;
+            }
+        }
+    }
+
+}
+.custom-radio{
+    &.vertical{
+        label{
+            display: block;    
+        }
+    }
+    label{
+        margin:0 10px 10px 0;
+        padding: 0 0 0 26px;
+        cursor: pointer;
+        position: relative;
+        display:inline-block
+    }
+    input[type="radio"]{
+        display: none;
+        + span{
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            background: $white;
+            border: 1px solid $border-color;
+            border-radius: 50%;
+        }
+        ~ span:after {
+            display: none;
+            position: absolute;
+            content: "";
+        }
+        &:disabled{
+            + span {
+                opacity: 0.7;
+            }
+        }
+        &:checked{
+            + span {
+                background: $primary;
+                border: 1px solid $primary;
+                @include css3-prefix(transition, all 0.3s);
+            }
+            ~ span:after{
+                top: 50%;
+                left: 50%;
+                margin-left: -5px;
+                margin-top: -5px;
+                width: 10px;
+                height: 10px;
+                display: block;
+                background: $white;
+                @include border-radius(50%);
+            }
+        }
+    }
+}
+.ie8 .custom-checkbox input[type="checkbox"],
+.ie8 .custom-radio input[type="radio"] {
+  display: inline-block;
+}
+.ie8 .custom-checkbox span,
+.ie8 .custom-radio span {
+  display: none;
+}
+
+.dropdown {
+    .dropdown-menu {
+        position: relative;
+        top: 100%;
+        box-shadow: $box-shadow;
+        background: $white;
+        border-color: $border-color;
+        border-radius: $border-radius;
+        margin-top: 8px;
+        &::before {
+            border-top: 1px solid $border-color;
+            border-left: 1px solid $border-color;
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: 1.2rem;
+            width: .75rem;
+            height: .75rem;
+            display: block;
+            background: $white;
+            transform: rotate(45deg) translate(-7px);
+            z-index: -1;
+            box-sizing: border-box;
+        }
+        .dropdown-item{
+            font-weight: $font-regular;
+            font-size: size(15);
+            letter-spacing: size(-0.12);
+            line-height: size(22);
+            color: $black;
+            padding: size(10) size(16);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            &:hover, &:focus{
+                background: transparent;
+                color: $primary;
+                outline: none;
+            }
+            &.active{
+                background: transparent;
+                color: $primary;
+            }
+            .bx{
+                margin-right: 10px;
+                color: $primary;
+                font-size: size(20);
+            }
+        }
+    }
+    .dropdown-toggle {
+        &.nav-link {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

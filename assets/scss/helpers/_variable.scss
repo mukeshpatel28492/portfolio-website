@@ -1,0 +1,90 @@
+/* =========== IMAGE PATH VARIABLE ============= */
+$assetPath : "../../assets/images";
+/* Usage of bacground image */
+//background: url(#{$assetPath}/background.jpg) repeat-x fixed 0 0;
+
+// Color system
+$white:    	#ffffff;
+$black:	    #000000;	
+$primary: 	#061C3D;
+$secondary:	#0B63E5;
+$red:       #D02A36;
+$blue:      #073B89;
+$light-blue:#094FB7;
+$success:  	#0F9918;
+$info:     	#0A73B3;
+$warning: 	#FF8800;
+$danger:  	#C81B2F;
+$light:   	#F2F2F2;
+$dark:    	#010101;
+$gray: 	  	#616161;
+$border-color: #E2E2E2;
+$title-border-color: #959EAC;
+$mega-menu-font-color: #3D4E62;
+$view-more-btn-color:#021633;
+$accordian-color:#E5E5E5;
+$techology-circle-color: #0874B4;
+$dot-color:#EBDD5F;
+$box-bg-color: #F2F7FF;
+$dash-color: #C8C8C8;
+$input-bg-color: #FCECEC;
+
+
+
+// Font
+$font-family-base:'Noto Sans Display', sans-serif,'Noto Serif', serif;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px` 
+$font-custom:16;
+$font-light: 300;
+$font-regular:400;
+$font-medium:500;
+$font-semibold: 600;
+$font-bold: 700;
+$line-height-base: 1.25;
+
+/*Paragraph Element */
+$paragraph-margin-bottom: 1rem;
+
+// Media BreakPoint
+$breakpoint-xxl: 1440px;   // laptop , desktop
+$breakpoint-xl: 1200px;   // iPad landscape 
+$breakpoint-lg: 992px;    // iPad potrate
+$breakpoint-md: 768px;     // mobile 
+$breakpoint-sm: 576px;  
+$breakpoint-xs: 414px;
+
+// Components
+// Define common border radius sizes and more.
+$border-radius: 0.25rem; // 4px
+$border-radius-6:0.375rem; // 6px
+$border-radius-12:0.75rem; // 12px
+$border-radius-16:1rem; // 16px
+$border-radius-24:1.5rem; // 24px
+$border-radius-32:2rem; // 32px
+$border-radius-60 :3.75rem; // 60px
+$border-radius-100 :6.25rem; // 60px
+$rounded-pill: 100%;
+
+$box-shadow-sm:0 .125rem .25rem rgba($black, .075);
+$box-shadow:0 .5rem 1rem rgba($black, .15);
+$box-shadow-lg:0 1rem 3rem rgba($black, .175);
+$box-shadow-0:none;
+
+// Spacing
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+  ),
+  $spacers
+);
+

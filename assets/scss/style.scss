@@ -1,0 +1,63 @@
+// Bootstrap overdies varibles File
+@import "helpers/variable";
+// Default Bootstrap scss File no need to change
+@import "bootstrap/bootstrap.scss"; // Bootstrap v5.0.2
+// Custom Files
+@import "helpers/import.scss";
+@import "component/all.scss";
+
+body {
+    background: $white;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $black;
+    font-weight: $font-regular;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+}
+
+// Custom Scroll with CSS only Supported Browser Chrome, Safari and Firefox
+* {
+    scrollbar-color: $primary transparent;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: $border-radius-6;
+}
+
+// Browser Text Selection Color
+::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background: $primary;
+}
+::selection {
+    color: $white;
+    background: $primary;
+}
+
+
+
+  
+  
+
+
+
