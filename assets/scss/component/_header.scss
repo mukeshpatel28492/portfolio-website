@@ -6,46 +6,32 @@
     z-index: 999;
     background-color: rgb(255 251 251 / 49%);
     @include Transition(all 0.3s ease-in-out);
-    &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 200px;
-       // background: linear-gradient(rgba(0, 0, 0, 0.5) 50%, transparent);
-        z-index: -1;
-    }
-    &.header-sticky{
-        background: rgba(248, 246, 246, 0.8);
-        .navbar {
-            .logo-box{
-                img{
-                    width:size(200);
-                    @include Transition(all 0.3s ease-in-out);
-                }
-            }
-            .navbar-nav{
-                .nav-item{
-                    a{
-                        font-size: size(16);
-                    }
-                }
-            }
-        }
-    }
+    -webkit-backdrop-filter:saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 200px;
+    //    // background: linear-gradient(rgba(0, 0, 0, 0.5) 50%, transparent);
+    //     z-index: -1;
+    // }
    
     .navbar{
         .logo-box{
                 img{
-                     width:size(300);
-                    
+                     width:size(230);
                 }
         }
         .navbar-nav{
             .nav-item{
+                .nav-link{
+                    padding: 0 ;
+                }
                 a{
-                    color: #2e2d2d;
-                    font-size: size(20);
+                    color: $black;
+                    font-size: size(16);
                     font-weight: $font-medium;
                 }
             }
@@ -54,11 +40,7 @@
             justify-content: end;
             .navbar-nav{
                 .nav-item{
-                    margin: size(5);
-                    .nav-link{
-                        
-                    }
-                    
+                    margin: size(5) size(10);
                 }
             }
         }
@@ -66,23 +48,3 @@
 
 }
 
-
-.cool-link {
-    display: inline-block;
-    color: #ffab00;
-    text-decoration: none;
-}
-
-.cool-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #ffab00;
-    transition: width .3s;
-}
-
-.cool-link:hover::after {
-    width: 100%;
-    //transition: width .3s;
-}

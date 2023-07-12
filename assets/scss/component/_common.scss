@@ -24,15 +24,16 @@
     padding-left: size(16);
     padding-right: size(16);
 }
-.title-text{
-    color: transparent;
-    -webkit-text-stroke: 1px #959eac;
-    text-rendering: optimizeLegibility;
-}  
-.mt-32{
-    margin-top: size(32);
-}
 
+.title-box{
+    max-width: size(850);
+    padding-bottom:size(40);
+    p{
+        font-size: size(18);
+        line-height: size(28);
+    }
+   
+  }
 
 
   

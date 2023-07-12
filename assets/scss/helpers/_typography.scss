@@ -24,6 +24,7 @@ h2, .h2 {
 	font-size:size(50); 
 	line-height:size(58);
 	letter-spacing: 1.6px;
+	margin-bottom: size(30);
 	@include media(down, $breakpoint-md) {
         font-size: size(28);
         line-height: size(44);
@@ -31,10 +32,11 @@ h2, .h2 {
 }
 h3, .h3 { 
 	font-family: $font-family-base;
-	font-weight: $font-medium;
+	font-weight: $font-semibold;
 	font-size:size(40); 
 	line-height:size(48);
 	color:$dark;
+	margin-bottom: size(20);
 	@include media(down, $breakpoint-md) {
 		font-size:size(24); 
 		line-height:size(42);
@@ -80,29 +82,14 @@ p{
 	font-weight: $font-regular;
 	font-size: size(16);
 	line-height: size(26);
-	color: $gray;
+	color: $dark-gray;
 	@include media(down, $breakpoint-md) {
 		font-size: size(14);
 		line-height: size(24);
 	}
 }
-.breadcrumb {
-	font-family: $font-family-base;
-	font-weight: $font-medium;
-	font-size: size(20);
-	line-height: size(30);
-	color: $red;
-	margin-bottom: size(10);
-	@include media(down, $breakpoint-md) {
-		font-size:size(16); 
-		line-height:size(26);
-		display: block;
-		text-align: center;
-	}
-  }
 
 a {
-    color: $primary;
 	text-decoration: none;
 	@include Transition(all 0.3s ease-in-out);
     &:hover {

@@ -1,12 +1,13 @@
 .about-us-section{
-  margin-top: size(50);
+  margin-top: size(100);
   .about-us-box{
-    padding: size(85) size(50);
-    background-color: lightgray;
-   
     .content-box{
+      margin: size(40)size(50)0 0;
+    }
+    .button-box{
       margin-top: size(40);
     }
   }
   
 }
+
