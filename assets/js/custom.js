@@ -22,16 +22,18 @@
           slidesToShow: 5,
           slidesToScroll: 1,
           centerMode: true,
-          arrows: true,
+          arrows: false,
           dots: false,
-          speed: 300,
-          centerPadding: '20px',
+          speed: 500,
+          centerPadding: '30px',
           infinite: true,
-          autoplaySpeed: 5000,
+          autoplaySpeed: 2000,
           autoplay: true
         });
       });
       /*===== Testimonial slider =====*/
+
+      
 
     });
 })(jQuery);
